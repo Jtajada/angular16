@@ -1,0 +1,8 @@
+<div
+  *ngFor="let tarea of tareas"
+  [appTareaCompletada]="tarea.completada"
+  [appPrioridad]="tarea.prioridad"
+  (appResaltarPendientes)="tarea.pendiente"
+>
+  {{ tarea.descripcion }}
+</div>
