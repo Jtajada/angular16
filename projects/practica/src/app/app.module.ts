@@ -15,7 +15,11 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../enviroments/enviroment';
+
+// Directives
+import { AuthDirective } from './shared/directives/auth.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,7 @@ import { environment } from '../enviroments/enviroment';
     DashboardComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
+    AuthDirective,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,7 @@ import { environment } from '../enviroments/enviroment';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
